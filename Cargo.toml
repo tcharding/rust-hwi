@@ -15,6 +15,7 @@ bitcoin = { version = "0.31.0", features = ["serde", "base64"] }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = { version = "^1.0" }
 pyo3 = { version = "0.15.1", features = ["auto-initialize"] }
+psbt-v2 = { version = "0.1.0-beta.1", features = ["miniscript-std", "serde", "base64"] }
 
 miniscript = { version = "11.0", features = ["serde"], optional = true }
 
@@ -23,3 +24,7 @@ serial_test = "0.6.0"
 
 [features]
 doctest = []
+
+# Remove this once 0.1.0-beta.2 is out.
+[patch.crates-io.psbt-v2]
+path = "../../rust-psbt/master"

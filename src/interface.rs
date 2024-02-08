@@ -3,7 +3,7 @@ use std::ops::Deref;
 use std::process::Command;
 
 use bitcoin::bip32::DerivationPath;
-use bitcoin::Psbt;
+use psbt_v2::v0::Psbt;
 
 use serde::de::DeserializeOwned;
 use serde_json::value::Value;

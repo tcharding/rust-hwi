@@ -5,7 +5,7 @@ use std::str::FromStr;
 use bitcoin::address::{Address, NetworkUnchecked};
 use bitcoin::bip32::{Fingerprint, Xpub};
 use bitcoin::Network;
-use bitcoin::Psbt;
+use psbt_v2::v0::Psbt;
 
 use pyo3::types::PyModule;
 use pyo3::{IntoPy, PyObject};

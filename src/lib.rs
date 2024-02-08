@@ -47,7 +47,7 @@ mod tests {
 
     use bitcoin::bip32::{DerivationPath, KeySource};
     use bitcoin::locktime::absolute;
-    use bitcoin::psbt::{Input, Output};
+    use psbt_v2::v0::{Input, Output, Psbt};
     use bitcoin::{secp256k1, Transaction};
     use bitcoin::{transaction, Amount, Network, TxIn, TxOut};
 
@@ -229,7 +229,7 @@ mod tests {
             },
             ..Default::default()
         };
-        let psbt = bitcoin::Psbt {
+        let psbt = Psbt {
             unsigned_tx: Transaction {
                 version: transaction::Version::ONE,
                 lock_time: absolute::LockTime::from_consensus(0),
